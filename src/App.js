@@ -5,11 +5,17 @@ import './App.css';
 
 function App() {
   const [red, setRed] = useState({left: 0, top: 0});
-  const [blue, setBlue] = useState({left: 0, top: 0});
+  const [blue, setBlue] = useState({left: 50, top: 0});
 
   const shuffle = () => {
-    setRed(random());
-    setBlue(random());
+    const redStyle = random();
+    
+    let blueStyle = {};
+    do {
+      blueStyle = random();
+    } while (redStyle.left === blueStyle.left && redStyle.top === blueStyle.top)
+    setRed(redStyle);
+    setBlue(blueStyle);
   }
 
   const random = () => {
