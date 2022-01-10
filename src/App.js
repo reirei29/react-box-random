@@ -1,7 +1,6 @@
-import logo from './logo.svg';
-import Rect from './components/Rect';
+import Rect from 'components/Rect';
 import { useState } from 'react';
-import './App.css';
+import 'App.css';
 
 const App = () => {
   const [red, setRed] = useState({left: 0, top: 0});
