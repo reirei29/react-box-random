@@ -3,7 +3,7 @@ import Rect from './components/Rect';
 import { useState } from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
   const [red, setRed] = useState({left: 0, top: 0});
   const [blue, setBlue] = useState({left: 50, top: 0});
 
